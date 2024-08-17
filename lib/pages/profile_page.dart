@@ -97,25 +97,31 @@ class _ProfilePageState extends State<ProfilePage> with AppMixin{
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
+                    
                     children: [
-                      Text(
-                        "Informasi",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: semi,
-                          color: Theme.of(context).colorScheme.onPrimary
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Informasi",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: semi,
+                              color: Theme.of(context).colorScheme.onPrimary,
+                            ),
+                          ),
+                        ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Image.asset(
-                            'assets/icons/at.png',
-                          ),
-                          // Image(
-                          //   image: AssetImage('assets/icons/vanbot.png'),
-                          //   height: 25,
+                          // Image.asset(
+                          //   'assets/icons/vanbot.png',
                           // ),
+                          Image(
+                            image: AssetImage('assets/icons/vanbot.png'),
+                            height: getScreenHeight(context) * 0.05,
+                          ),
                           const Text("Vanbot")
                         ],
                       ),
