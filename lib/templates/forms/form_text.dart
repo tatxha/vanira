@@ -62,7 +62,7 @@ class _FormTextState extends State<FormText> with AppMixin {
             controller: widget.controller,
             keyboardType: widget.keyboardType,
             decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(vertical: 0,),
+              contentPadding: EdgeInsets.symmetric(vertical: 0,),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),

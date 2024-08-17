@@ -12,7 +12,7 @@ class _ProfilePageState extends State<ProfilePage> with AppMixin{
   @override
   Widget build(BuildContext context) {
     
-    final double avatarSize = getScreenWidth(context) * 0.25;
+    final double avatarSize = getScreenWidth(context) * 0.3;
     final double primaryIconSize = getScreenWidth(context) * 0.08;
     final double secondaryIconSize = getScreenWidth(context) * 0.1;
 
@@ -29,11 +29,11 @@ class _ProfilePageState extends State<ProfilePage> with AppMixin{
                   color: Colors.amber,
                 ),
                 Positioned(
-                  bottom: -(avatarSize/2), // mengatur bagian circle yang berada di luar container
+                  bottom: -50, // mengatur bagian circle yang berada di luar container
                   child: Container(
                     height: avatarSize,
                     width: avatarSize,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
@@ -91,7 +91,7 @@ class _ProfilePageState extends State<ProfilePage> with AppMixin{
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius:  const BorderRadius.all(Radius.circular(15)),
+                  borderRadius:  BorderRadius.all(Radius.circular(15)),
                   color: secondaryContainer,
                 ),
                 child: Padding(
