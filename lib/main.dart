@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vanira/pages/login_page.dart';
 import 'package:vanira/pages/profile_page.dart';
+import 'package:vanira/pages/mark_page.dart';
+import 'package:vanira/pages/home_page.dart';
 import 'package:vanira/pages/signup_page.dart';
 import 'package:vanira/pages/welcome_page.dart';
 
@@ -15,7 +17,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfilePage(),
+      home: MarkPage(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: const Color(0xFFEEFFF2),

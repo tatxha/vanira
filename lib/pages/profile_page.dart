@@ -129,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage> with AppMixin{
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Informasi",
+                        "bmasi",
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: semi,

@@ -20,6 +20,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/tourist_attractions/
   fonts:
   - family: Montserrat
     fonts:
