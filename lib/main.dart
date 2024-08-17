@@ -4,6 +4,7 @@ import 'package:vanira/pages/profile_page.dart';
 import 'package:vanira/pages/mark_page.dart';
 import 'package:vanira/pages/home_page.dart';
 import 'package:vanira/pages/signup_page.dart';
+import 'package:vanira/pages/splash_page.dart';
 import 'package:vanira/pages/welcome_page.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MarkPage(),
+      home: SplashPage(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: const Color(0xFFEEFFF2),
@@ -29,7 +30,7 @@ class MainApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         scaffoldBackgroundColor: Colors.white,
         dividerColor: Color(0xFFBDD7C3),
-        splashColor: Color(0xFF67A076),
+        splashColor: Color(0xFFEEFFF2),
       ),
     );
   }
