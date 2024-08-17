@@ -7,24 +7,15 @@ class PrimaryButton extends StatelessWidget with AppMixin {
   final String buttonText;
   final double fontSize;
 
-  PrimaryButton({super.key, required this.onPressed, required this.buttonText, required this.fontSize});
+  PrimaryButton({required this.onPressed, required this.buttonText, required this.fontSize});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFF83D0AF),
-            Color(0xFFADD9B7),
-          ]
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-          backgroundColor: Color(0xFF83D0AF),
+          shape: LinearBorder()
         ),
         child: Text(
           " " + buttonText + " ",
@@ -34,6 +25,15 @@ class PrimaryButton extends StatelessWidget with AppMixin {
             color: Colors.white,
           ),
         ),
+      ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color(0xFF83D0AF),
+            Color(0xFFADD9B7),
+          ]
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
     );
   }

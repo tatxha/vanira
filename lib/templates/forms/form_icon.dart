@@ -69,7 +69,7 @@ class _FormIconState extends State<FormIcon> with AppMixin {
             keyboardType: widget.keyboardType,
             obscureText: widget.obscureText,
             decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(vertical: 0,),
+              contentPadding: EdgeInsets.symmetric(vertical: 0,),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -80,7 +80,7 @@ class _FormIconState extends State<FormIcon> with AppMixin {
                 color: Theme.of(context).colorScheme.secondary,
               ),
               suffixIcon: IconButton(
-                padding: const EdgeInsets.only(bottom: 1),
+                padding: EdgeInsets.only(bottom: 1),
                 icon: Icon(
                   widget.suffixIcon,
                   color: Theme.of(context).colorScheme.secondary,

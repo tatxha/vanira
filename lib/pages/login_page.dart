@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:vanira/main.dart';
+import 'package:vanira/pages/signup_page.dart';
 import 'package:vanira/templates/buttons/primary_button.dart';
 import 'package:vanira/templates/forms/form_icon.dart';
 import 'package:vanira/templates/forms/form_text.dart';
@@ -42,15 +44,11 @@ class _LoginPageState extends State<LoginPage> with AppMixin{
                       color: theme.colorScheme.onPrimary,
                     ),
                   ),
-                  const SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                     child: Container(
                       width: 500,
-                      decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(Radius.circular(20)),
-                        color: primaryContainer,
-                      ),
                       child: Padding(
                         padding: const EdgeInsets.all(18.0),
                         child: Column(
@@ -83,9 +81,13 @@ class _LoginPageState extends State<LoginPage> with AppMixin{
                           ],
                         ),
                       ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        color: primaryContainer,
+                      ),
                     ),
                   ),
-                  const SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                   PrimaryButton(
                     onPressed: () {
           
@@ -93,7 +95,7 @@ class _LoginPageState extends State<LoginPage> with AppMixin{
                     buttonText: "Masuk",
                     fontSize: 20
                   ),
-                  const SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                   Row(
                     children: [
                       Expanded(
@@ -119,7 +121,7 @@ class _LoginPageState extends State<LoginPage> with AppMixin{
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                     child: Row(
@@ -144,7 +146,7 @@ class _LoginPageState extends State<LoginPage> with AppMixin{
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                   RichText(
                     text: TextSpan(
                       style: TextStyle(
@@ -154,12 +156,15 @@ class _LoginPageState extends State<LoginPage> with AppMixin{
                         color: theme.colorScheme.onPrimary,
                       ),
                       children: [
-                        const TextSpan(
+                        TextSpan(
                           text: "Belum punya akun? "
                         ),
                         TextSpan(
                           text: "Buat akun",
                           style: TextStyle(fontWeight: bold),
+                          recognizer: TapGestureRecognizer()..onTap = () {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignUpPage()));
+                          }
                         ),
                       ]
                     ),
