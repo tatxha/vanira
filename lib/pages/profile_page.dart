@@ -35,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> with AppMixin{
                       bottomRight: Radius.circular(20.0),
                     ),
                     image: DecorationImage(
-                      image: AssetImage('assets/images/profile_pict.jpg'),
+                      image: AssetImage('assets/images/background_pict.jpg'),
                       fit: BoxFit.cover,
                     ),
                   ),

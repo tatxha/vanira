@@ -21,7 +21,7 @@ class MarkPage extends StatefulWidget {
 }
 
 class _MarkPageState extends State<MarkPage> with AppMixin {
-  final List<TouristAttractionsData> images = [
+  final List<TouristAttractionsData> data = [
     TouristAttractionsData(
       path: 'assets/tourist_attractions/kelingking_beach.jpg',
       name: 'Kelingking Beach',
@@ -57,7 +57,7 @@ class _MarkPageState extends State<MarkPage> with AppMixin {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
-            children: images.map((attractions_data) {
+            children: data.map((attractions_data) {
               return Padding(
                 padding: const EdgeInsets.only(top: 20.0),
                 child: Container(
