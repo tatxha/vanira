@@ -112,6 +112,12 @@ class _HomePageState extends State<HomePage> with AppMixin{
                     ),
                   ),
                 ),
+                Positioned(
+                  child: Image.asset(
+                    'assets/iamges/character1.png',
+                    width: getScreenWidth(context) * 2,
+                  ) 
+                )
               ],
             )
           ],
