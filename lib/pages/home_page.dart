@@ -84,65 +84,60 @@ class _HomePageState extends State<HomePage> with AppMixin{
           color: Colors.amber,
           borderRadius: BorderRadius.circular(25),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Stack(
-                // alignment: Alignment.centerLeft,
-                // clipBehavior: Clip.none, // Allows the image to overflow
-                children: [
-                  Positioned(
-                    right: 0,
-                    child: Container(
-                      height: getScreenHeight(context) * 0.3,
-                      // width: 200,
-                      width: getScreenWidth(context) * 0.55,
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Cari Tempat Wisata"),
-                            Text(
-                              "Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!",
-                              style: TextStyle(
-                                // maxline
-                              ),
-                              overflow: TextOverflow.fade,
-                              maxLines: 5,
-                            ),
-                            NextButton(
-                              onPressed: () {},
-                              size: getScreenWidth(context) * 0.07,
-                            ),
-                          ],
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Stack(
+            // alignment: Alignment.centerLeft,
+            // clipBehavior: Clip.none, // Allows the image to overflow
+            children: [
+              Positioned(
+                right: 0,
+                child: Container(
+                  height: getScreenHeight(context) * 0.3,
+                  // width: 200,
+                  width: getScreenWidth(context) * 0.55,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Cari Tempat Wisata"),
+                        Text(
+                          "Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!",
+                          style: TextStyle(
+                            // maxline
+                          ),
+                          overflow: TextOverflow.fade,
+                          maxLines: 5,
                         ),
-                      ),
+                        NextButton(
+                          onPressed: () {},
+                          size: getScreenWidth(context) * 0.07,
+                        ),
+                      ],
                     ),
                   ),
-                  Positioned(
-                    left: 0,
-                    // left:  - getScreenWidth(context) * 0.5,
-                    // 200 lebar container, 15 padding
-                    // left: -(getScreenWidth(context) - (getScreenWidth(context) * 0.55))  + 15 + 10,
-                    // left:  -(getScreenWidth(context) - getScreenWidth(context) * 0.5),
-                    // margin carousel + padding + image padding
-                    // left: (-(getScreenWidth(context)) + (getScreenWidth(context) * 0.55) + 15 + 15 + 10), // Adjust the image position to overlap 10% of its width
-                    child: Image.asset(
-                      'assets/images/character1.png',
-                      width: getScreenWidth(context) * 0.5, // Adjust the width as needed
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ],
+              Positioned(
+                left: 0,
+                // left:  - getScreenWidth(context) * 0.5,
+                // 200 lebar container, 15 padding
+                // left: -(getScreenWidth(context) - (getScreenWidth(context) * 0.55))  + 15 + 10,
+                // left:  -(getScreenWidth(context) - getScreenWidth(context) * 0.5),
+                // margin carousel + padding + image padding
+                // left: (-(getScreenWidth(context)) + (getScreenWidth(context) * 0.55) + 15 + 15 + 10), // Adjust the image position to overlap 10% of its width
+                child: Image.asset(
+                  'assets/images/character1.png',
+                  width: getScreenWidth(context) * 0.5, // Adjust the width as needed
+                ),
+              ),
+            ],
+          ),
         ),
 
 //         child: Row(
