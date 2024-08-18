@@ -104,10 +104,10 @@ class _HomePageState extends State<HomePage> with AppMixin{
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Cari Tempat Wisata"),
-                        Text("Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!"),
+                        // Text("Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!"),
                         NextButton(
                           onPressed: (){},
-                          size: 20,
+                          size: 32,
                         )
                       ],
                     ),
