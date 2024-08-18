@@ -106,7 +106,8 @@ class _HomePageState extends State<HomePage> with AppMixin{
                         Text("Cari Tempat Wisata"),
                         Text("Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!"),
                         NextButton(
-                          onPressed: (){}
+                          onPressed: (){},
+                          size: 20,
                         )
                       ],
                     ),
