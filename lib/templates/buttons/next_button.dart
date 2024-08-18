@@ -8,12 +8,13 @@ class NextButton extends StatelessWidget with AppMixin {
 
   NextButton({
     required this.onPressed,
-    this.size = 32,
+    this.size = 55,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: size,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
@@ -21,7 +22,7 @@ class NextButton extends StatelessWidget with AppMixin {
         ),
         child: Icon(
           Icons.arrow_forward_rounded,
-          size: size,
+          size: size/2,
         )
       ),
       decoration: BoxDecoration(

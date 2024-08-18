@@ -87,101 +87,42 @@ class _HomePageState extends State<HomePage> with AppMixin{
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: Stack(
-                alignment: Alignment.centerLeft,
-                clipBehavior: Clip.none, // Allows the image to overflow
-                children: [
-                  Container(
-                    height: 150,
-                    // width: 200,
-                    width: getScreenWidth(context) * 0.55,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Cari Tempat Wisata"),
-                          Text(
-                            "Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!",
-                            style: TextStyle(
-                              // maxline
-                            ),
-                            overflow: TextOverflow.fade,
-                            maxLines: 5,
-                          ),
-                          NextButton(
-                            onPressed: () {},
-                            size: 15,
-                          ),
-                        ],
-                      ),
+            Stack(
+              alignment: Alignment.centerLeft,
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  height: 150,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Cari Tempat Wisata"),
+                        Text("Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!"),
+                        NextButton(
+                          onPressed: (){},
+                          size: 20,
+                        )
+                      ],
                     ),
                   ),
-                  Positioned(
-                    // left: 0,
-                    // 200 lebar container, 15 padding
-                    // left: -((getScreenWidth(context) - 200) / 2) + 15,
-                    // margin carousel + padding + image padding
-                    left: (-(getScreenWidth(context)) + (getScreenWidth(context) * 0.5) + 15 + 10 + 10), // Adjust the image position to overlap 10% of its width
-                    child: Image.asset(
-                      'assets/images/character1.png',
-                      width: getScreenWidth(context) * 0.5, // Adjust the width as needed
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                ),
+                Positioned(
+                  child: Image.asset(
+                    'assets/iamges/character1.png',
+                    width: getScreenWidth(context) * 2,
+                  ) 
+                )
+              ],
+            )
           ],
         ),
-
-//         child: Row(
-//   mainAxisAlignment: MainAxisAlignment.center,
-//   children: [
-//     Stack(
-//       alignment: Alignment.centerLeft,
-//       clipBehavior: Clip.none, // Allows the image to overflow
-//       children: [
-//         Positioned(
-//           left: -(getScreenWidth(context) * 0.2), // Adjust the image position to overlap 10% of its width
-//           child: Image.asset(
-//             'assets/images/character1.png',
-//             width: getScreenWidth(context) * 0.6, // Adjust the width as needed
-//           ),
-//         ),
-//         Container(
-//           height: 150,
-//           width: 200,
-//           decoration: BoxDecoration(
-//             color: Colors.red,
-//             borderRadius: BorderRadius.circular(15),
-//           ),
-//           child: Padding(
-//             padding: const EdgeInsets.all(20.0),
-//             child: Column(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               children: [
-//                 Text("Cari Tempat Wisata"),
-//                 Text("Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!"),
-//                 NextButton(
-//                   onPressed: () {},
-//                   size: 15,
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ],
-//     ),
-//   ],
-// ),
-
-
       ),
       // Slide 2
       
