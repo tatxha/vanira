@@ -1,52 +1,3 @@
-
-//     return Scaffold(
-//       body: SingleChildScrollView(
-//         child: Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 10.0),
-//           child: Column(
-//             children: [
-//               Text("YO PHON LINGING", style: TextStyle(fontSize: 30, color: Colors.black)),
-//               SizedBox(height: 30),
-              
-//               // SearchAnchor(
-//               //   builder: (BuildContext context, SearchController controller) {
-//               //     return SearchBar(
-//               //       controller: controller,
-//               //       padding: const MaterialStatePropertyAll<EdgeInsets>(
-//               //           EdgeInsets.symmetric(horizontal: 16.0)),
-//               //       onTap: () {
-//               //         controller.openView();
-//               //       },
-//               //       onChanged: (_) {
-//               //         controller.openView();
-//               //       },
-//               //       leading: const Icon(Icons.search),
-//               //       hintText: "Cari Tempat Wisata",
-//               //       hintStyle: MaterialStateTextStyle.resolveWith(
-//               //         (Set<MaterialState> states ) {
-//               //           return TextStyle(
-//               //             fontSize: (24 / 2) * (getScreenHeight(context)/932 + getScreenWidth(context)/430),
-//               //               fontWeight: semi,
-//               //               color: Theme.of(context).colorScheme.onPrimary
-//               //           );
-//               //         }
-//               //       ),
-//               //     );
-//               //   }, suggestionsBuilder: (BuildContext context, SearchController controller) {
-//               //     return List<ListTile>.generate(5, (int index) {
-//               //       final String item = 'item $index';
-//               //       return ListTile(
-//               //         title: Text(item),
-//               //         onTap: () {
-//               //           setState(() {
-//               //             controller.closeView(item);
-//               //           });
-//               //         },
-//               //       );
-//               //     });
-//               //   }
-//               // ),
-
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -100,7 +51,6 @@ class _HomePageState extends State<HomePage> with AppMixin {
       // Slide 1
       Container(
         width: getScreenWidth(context),
-        // margin: EdgeInsets.symmetric(horizontal: 5.0),
         decoration: BoxDecoration(
           color: primaryContainer,
           borderRadius: BorderRadius.circular(25),
@@ -109,7 +59,6 @@ class _HomePageState extends State<HomePage> with AppMixin {
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
           child: Stack(
             alignment: Alignment.center,
-            // clipBehavior: Clip.none, // Allows the image to overflow
             children: [
               Positioned(
                 right: 0,
@@ -144,9 +93,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
                         Text(
                           "Temukan tempat wisata yang sesuai dengan kepribadian kamu dengan Trip Matcher!",
                           style: TextStyle(
-                            // maxline
                             fontSize: 8 * (getScreenHeight(context)/932 + getScreenWidth(context)/430),
-                            // fontSize: 14,
                             fontWeight: medium,
                             color: Theme.of(context).colorScheme.onPrimary
                           ),
@@ -176,10 +123,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
       ),
       // Slide 2
       Container(
-        // height: getScreenWidth(context) * 0.3,
-        // width: (getScreenWidth(context) * 0.3) * 9/16,
         width: getScreenWidth(context),
-        // margin: EdgeInsets.symmetric(horizontal: 5.0),
         decoration: BoxDecoration(
           color: primaryContainer,
           borderRadius: BorderRadius.circular(25),
@@ -188,7 +132,6 @@ class _HomePageState extends State<HomePage> with AppMixin {
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
           child: Stack(
             alignment: Alignment.center,
-            // clipBehavior: Clip.none, // Allows the image to overflow
             children: [
               Positioned(
                 right: 0,
@@ -223,9 +166,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
                         Text(
                           "Analisa wajah Anda dan temukan tempat wisata yang cocok dengan permasalahan Anda!",
                           style: TextStyle(
-                            // maxline
                             fontSize: 8 * (getScreenHeight(context)/932 + getScreenWidth(context)/430),
-                            // fontSize: 14,
                             fontWeight: medium,
                             color: Theme.of(context).colorScheme.onPrimary
                           ),
@@ -261,17 +202,15 @@ class _HomePageState extends State<HomePage> with AppMixin {
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             children: [
-              // Text("YO PHON LINGING", style: TextStyle(fontSize: 30, color: Colors.black)),
               SizedBox(height: 30),
               Container(
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      width: getScreenHeight(context) * 0.09, // ukuran lebar border
-                      height: getScreenHeight(context) * 0.09, // ukuran tinggi border
+                      width: getScreenHeight(context) * 0.09,
+                      height: getScreenHeight(context) * 0.09, 
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         gradient: LinearGradient(
@@ -289,8 +228,6 @@ class _HomePageState extends State<HomePage> with AppMixin {
                           child: Image.asset(
                             'assets/images/profile_pict.jpg',
                             fit: BoxFit.cover,
-                            width: 90.0, // ukuran gambar lebih kecil dari container agar border terlihat
-                            height: 90.0, // ukuran gambar lebih kecil dari container agar border terlihat
                           ),
                         ),
                       ),
@@ -303,8 +240,8 @@ class _HomePageState extends State<HomePage> with AppMixin {
                       ),
                     ),
                     Container(
-                      width: getScreenHeight(context) * 0.09, // ukuran lebar border
-                      height: getScreenHeight(context) * 0.09, // ukuran tinggi border
+                      width: getScreenHeight(context) * 0.09, 
+                      height: getScreenHeight(context) * 0.09,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         gradient: LinearGradient(
@@ -319,8 +256,6 @@ class _HomePageState extends State<HomePage> with AppMixin {
                       child: Padding(
                         padding: const EdgeInsets.all(3.0),
                         child: Container(
-                          width: 100.0, // ukuran lebar border
-                          height: 100.0, // ukuran tinggi border
                           decoration: BoxDecoration(
                           color: Colors.white,
                             shape: BoxShape.circle, 
@@ -345,8 +280,6 @@ class _HomePageState extends State<HomePage> with AppMixin {
               CarouselSlider(
                 items: fueatureItems,
                 options: CarouselOptions(
-                  // height: 200,
-                  // enlargeCenterPage: false,
                   autoPlay: true,
                   aspectRatio: 16 / 9,
                   autoPlayInterval: Duration(seconds: 2),
@@ -368,7 +301,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
                 children: fueatureItems.asMap().entries.map((item) {
                   bool isActiveFeature = _currFeature == item.key;
                   return GestureDetector(
-                    // onTap: (),
+                    onTap: (){},
                     child: Container(
                       width: isActiveFeature? 15 : 12,
                       height: isActiveFeature? 15 : 12,
@@ -397,19 +330,19 @@ class _HomePageState extends State<HomePage> with AppMixin {
  
   Widget searchWidget(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(2.0), // Width of the gradient border
+      padding: EdgeInsets.all(2.0),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [Color(0xFF83D0AF), Color(0xFFADD9B7)],
           stops: [0.0, 1.0],
         ),
-        borderRadius: BorderRadius.all(Radius.circular(50)), // Match the border radius of the inner container
+        borderRadius: BorderRadius.all(Radius.circular(50)), 
       ),
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
         decoration: BoxDecoration(
-          color: Colors.white, // Fill color
-          borderRadius: BorderRadius.all(Radius.circular(50)), // Must match the outer container's border radius
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(50)), 
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
@@ -455,7 +388,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
             "Rekomendasi",
             style: TextStyle(
               fontSize: (24 / 2) * (getScreenHeight(context) / 932 + getScreenWidth(context) / 430),
-              fontWeight: FontWeight.w600, // semi
+              fontWeight: FontWeight.w600, 
               color: Theme.of(context).colorScheme.onPrimary,
             ),
           ),
@@ -470,7 +403,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
               "Tempat wisata yang mungkin kamu sukai",
               style: TextStyle(
                 fontSize: (14 / 2) * (getScreenHeight(context) / 932 + getScreenWidth(context) / 430),
-                fontWeight: FontWeight.w500, // medium
+                fontWeight: FontWeight.w500, 
                 color: Theme.of(context).colorScheme.onPrimary,
               ),
               maxLines: 2,
@@ -480,7 +413,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
             "Lihat Semua",
             style: TextStyle(
               fontSize: (14 / 2) * (getScreenHeight(context) / 932 + getScreenWidth(context) / 430),
-              fontWeight: FontWeight.w600, // semi
+              fontWeight: FontWeight.w600, 
               color: Theme.of(context).colorScheme.onPrimary,
             ),
           ),
@@ -534,7 +467,7 @@ class _HomePageState extends State<HomePage> with AppMixin {
                   recommendationItems[_currRecommendation].name,
                   style: TextStyle(
                     fontSize: (18 / 2) * (getScreenHeight(context) / 932 + getScreenWidth(context) / 430),
-                    fontWeight: FontWeight.w600, // semi
+                    fontWeight: FontWeight.w600, 
                     color: Theme.of(context).colorScheme.onPrimary,
                   ),
                 ),
@@ -545,12 +478,12 @@ class _HomePageState extends State<HomePage> with AppMixin {
                       color: primaryIcon,
                       size: getScreenWidth(context) * 0.06,
                     ),
-                    SizedBox(width: 5), // Optional spacing between icon and text
+                    SizedBox(width: 5), 
                     Text(
                       recommendationItems[_currRecommendation].location,
                       style: TextStyle(
                         fontSize: (16 / 2) * (getScreenHeight(context) / 932 + getScreenWidth(context) / 430),
-                        fontWeight: FontWeight.w500, // medium
+                        fontWeight: FontWeight.w500, 
                         color: Theme.of(context).colorScheme.onPrimary,
                       ),
                     ),
